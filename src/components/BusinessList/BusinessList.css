@@ -1,0 +1,14 @@
+.BusinessList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 4.4rem 10%;
+}
+.react-paginate {
+  display: block;
+}
+.react-paginate li{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
