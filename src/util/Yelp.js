@@ -4,9 +4,7 @@ export const Yelp = {
   search(term, location, sortBy, offset, limit) {
     const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
     const url = `${corsAnywhere}https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}&offset=${offset}&limit=${limit}`;
-    console.log(url);
-    return fetch(url, {
-      headers: {
+    return fetch(url, {headers: {
         Authorization: `Bearer ${apiKey}`
       }
     })
@@ -14,7 +12,7 @@ export const Yelp = {
       if(response.ok){
         return response.json();
       }
-      throw new Error(response.status+', '+response.statusText);
+      throw new Error(response.status+', '+response.status);
     }, networkError => console.log(networkError.message))
     .then(jsonResponse => {
       if(jsonResponse.businesses){

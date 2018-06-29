@@ -11,4 +11,9 @@
     display: inline-block;
     padding-left: 15px;
     padding-right: 15px;
+    color: #f0c36c;
+}
+
+.react-paginate li:hover{
+  cursor: pointer;
 }

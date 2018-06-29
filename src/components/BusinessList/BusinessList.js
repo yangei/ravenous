@@ -18,7 +18,7 @@ class BusinessList extends React.Component {
     return (
       <div className="BusinessList">
         {this.props.businesses.map ( bussiness => <Business key={bussiness.id} bussiness={bussiness}/>)}
-        <ReactPaginate 
+        { (this.props.businesses && this.props.businesses.length > 0  )? <ReactPaginate
                        previousLabel={"previous"}
                        nextLabel={"next"}
                        breakLabel={<a href="">...</a>}
@@ -29,7 +29,7 @@ class BusinessList extends React.Component {
                        onPageChange={this.handlePageClick}
                        containerClassName={"react-paginate"}
                        subContainerClassName={"pages pagination"}
-                       activeClassName={"active"} />
+                       activeClassName={"active"} /> : null }
       </div>
     );
   }
