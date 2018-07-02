@@ -2,7 +2,7 @@ const apiKey = 'apiKey';
 
 export const Yelp = {
   search(term, location, sortBy, offset, limit) {
-    const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
+    const corsAnywhere = 'https://cryptic-headland-94862.herokuapp.com/';
     const url = `${corsAnywhere}https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}&offset=${offset}&limit=${limit}`;
     return fetch(url, {headers: {
         Authorization: `Bearer ${apiKey}`
